@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Sex">
+			<state id="Female" />
+			<state id="Male" />
+			<probabilities>0.33 0.6699999999999999</probabilities>
+		</cpt>
+		<cpt id="Age">
+			<state id="above_40" />
+			<state id="below_40" />
+			<probabilities>0.44 0.5600000000000001</probabilities>
+		</cpt>
+		<cpt id="Race">
+			<state id="Black" />
+			<state id="Other" />
+			<state id="White" />
+			<probabilities>0.1 0.05 0.85</probabilities>
+		</cpt>
+		<cpt id="Education">
+			<state id="Bachelors" />
+			<state id="Doctorate" />
+			<state id="HS_grad" />
+			<state id="Masters" />
+			<state id="Prof_school" />
+			<state id="before_HS" />
+			<parents>Race</parents>
+			<probabilities>0.11 0.00352 0.61 0.0275 0.07489999999999999 0.1740800000000001 0.21 0.0203 0.47 0.0617 0.0956 0.1424000000000001 0.17 0.0132 0.54 0.0552 0.0948 0.1267999999999999</probabilities>
+		</cpt>
+		<cpt id="Income">
+			<state id="below_50k" />
+			<state id="above_50k" />
+			<parents>Age Education Race Sex</parents>
+			<probabilities>0.72 0.28 0.43 0.5700000000000001 0.64 0.36 0.5 0.5 0.73 0.27 0.37 0.63 0.25 0.75 0 1 1 0 0.16 0.84 0.34 0.6599999999999999 0.17 0.83 0.97 0.03000000000000003 0.72 0.28 0.9 0.09999999999999998 0.73 0.27 0.87 0.13 0.64 0.36 0.48 0.52 0.3 0.7 0.67 0.33 0.39 0.61 0.64 0.36 0.27 0.73 0.87 0.13 0.52 0.48 0.84 0.16 0.38 0.62 0.8100000000000001 0.1899999999999999 0.41 0.5900000000000001 0.96 0.04000000000000004 0.89 0.11 0.92 0.07999999999999996 0.92 0.07999999999999996 0.97 0.03000000000000003 0.87 0.13 0.9 0.09999999999999998 0.6800000000000001 0.32 0.88 0.12 0.69 0.3100000000000001 0.8100000000000001 0.1899999999999999 0.6 0.4 0 1 0 1 0 1 0.67 0.33 0.59 0.41 0.32 0.6799999999999999 0.98 0.02000000000000002 0.91 0.08999999999999997 0.97 0.03000000000000003 0.89 0.11 0.95 0.05000000000000004 0.86 0.14 0.76 0.24 0.71 0.29 0.64 0.36 0.5600000000000001 0.4399999999999999 0.23 0.77 0.44 0.5600000000000001 0.9300000000000001 0.06999999999999995 0.83 0.17 0.8 0.2 0.74 0.26 0.84 0.16 0.69 0.3100000000000001 1 0 0.98 0.02000000000000002 0.98 0.02000000000000002 0.97 0.03000000000000003 0.99 0.01000000000000001 0.96 0.04000000000000004</probabilities>
+		</cpt>
+		<decision id="Imigrate">
+			<state id="Yes" />
+			<state id="No" />
+		</decision>
+		<utility id="Life_Quality">
+			<parents>Income Imigrate Age Sex</parents>
+			<utilities>-100 -80 -20 -40 0 0 0 0 100 120 120 120 -100 -80 -10 -10</utilities>
+		</utility>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5219.0" name="Network1" faultnameformat="nodestate">
+			<node id="Sex">
+				<name>Sex</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>156 69 196 94</position>
+			</node>
+			<node id="Age">
+				<name>Age</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>21 153 61 178</position>
+			</node>
+			<node id="Education">
+				<name>Education</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>36 272 97 310</position>
+			</node>
+			<node id="Race">
+				<name>Race</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>137 419 180 445</position>
+			</node>
+			<node id="Income">
+				<name>Income</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>275 183 326 214</position>
+			</node>
+			<node id="Imigrate">
+				<name>Imigrate</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>433 261 482 287</position>
+			</node>
+			<node id="Life_Quality">
+				<name>Life Quality</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>420 40 494 72</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
